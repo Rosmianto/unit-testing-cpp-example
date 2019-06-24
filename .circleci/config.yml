@@ -1,0 +1,11 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: suculent/platformio-docker-build
+
+    steps:
+      - checkout
+      - run:
+          name: SimpleModule Test
+          command: cmake . && make && ./TestSimpleModule
