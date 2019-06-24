@@ -1,4 +1,4 @@
-# unit-testing-cpp-example
+# unit-testing-cpp-example[![CircleCI](https://circleci.com/gh/Rosmianto/unit-testing-cpp-example.svg?style=svg)](https://circleci.com/gh/Rosmianto/unit-testing-cpp-example)
 A simple demonstration for Automated Unit Testing in C++ using Catch2 and CMake + CTest
 
 Build Makefile using CMake:
