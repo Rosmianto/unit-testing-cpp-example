@@ -2,14 +2,13 @@ version: 2
 jobs:
   build:
     docker:
-      - image: suculent/platformio-docker-build
+      - image: "debian:stretch"
 
     steps:
       - checkout
-      - run: apt-get install -y sudo # https://discuss.circleci.com/t/sudo-command-not-found/14208/4
-      - run: ls -al /bin/sh && sudo rm /bin/sh && sudo ln -s /bin/bash /bin/sh && ls -al /bin/sh
-      - run: sudo apt update -y
-      - run: sudo apt install -y cmake
+      - run: 'apt-get update && apt-get install -y sudo && rm -rf /var/lib/apt/lists/*'
+      - run: 'apt-get update && apt-get install -y gcc g++'
+      - run: 'apt-get update && sudo apt-get install -y cmake'
       - run:
           name: SimpleModule Test
           command: cmake . && make && ./TestSimpleModule
