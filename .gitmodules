@@ -1,0 +1,3 @@
+[submodule "arduino_ci"]
+	path = arduino_ci
+	url = https://github.com/ianfixes/arduino_ci.git

@@ -1,0 +1,6 @@
+CMakeFiles/
+Testing/
+CMakeCache.txt
+*.cmake
+Makefile
+TestSimpleModule
